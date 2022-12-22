@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🤖 𝚄𝚙𝚍𝚊𝚝𝚎𝚜', url='https://t.me/GreyMatter_Bots')
+                InlineKeyboardButton('⚡ ᴜᴘᴅᴀᴛᴇꜱ ⚡', url='https://t.me/PlusTechz')
             ],
             [
-                InlineKeyboardButton('ℹ️ 𝙷𝚎𝚕𝚙', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('⚡ ꜱᴜʙꜱᴄʀɪʙᴇ ⚡', url=f"https://www.youtube.com/@CinematoBugTV"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -42,13 +42,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ 𝙰𝚍𝚍 𝙼𝚎 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙶𝚛𝚘𝚞𝚙𝚜 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 𝚂𝚎𝚊𝚛𝚌𝚑', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 𝚄𝚙𝚍𝚊𝚝𝚎𝚜', url='https://t.me/GreyMatter_Bots')
+            InlineKeyboardButton('⚡ ꜱᴜʙꜱᴄʀɪʙᴇ ⚡', url='https://www.youtube.com/@CinematoBugTV'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ 🤖', url='https://t.me/PlusTechz')
             ],[
-            InlineKeyboardButton('ℹ️ 𝙷𝚎𝚕𝚙', callback_data='help'),
-            InlineKeyboardButton('😊 𝙰𝚋𝚘𝚞𝚝', callback_data='about')
+            InlineKeyboardButton('‼️ ʜᴇʟᴘ ‼️', callback_data='help'),
+            InlineKeyboardButton('♻️ ᴀʙᴏᴜᴛ ♻️', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -67,9 +67,12 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                    "ꜱᴜʙꜱᴄʀɪʙᴇ", url='https://www.youtube.com/@CinematoBugTV')
+            ],[
+                InlineKeyboardButton(
+                    "ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=invite_link.invite_link
                 )
-            ]
+                ]
         ]
 
         if message.command[1] != "subscribe":
@@ -81,20 +84,20 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="**𝘗𝘭𝘦𝘢𝘴𝘦 𝘧𝘪𝘳𝘴𝘵 𝘚𝘶𝘣𝘴𝘤𝘳𝘪𝘣𝘦 𝘔𝘺 𝘠𝘰𝘶𝘵𝘶𝘣𝘦 𝘊𝘩𝘢𝘯𝘯𝘦𝘭 & 𝘑𝘰𝘪𝘯 𝘔𝘺 𝘎𝘳𝘰𝘶𝘱 𝘵𝘰 𝘶𝘴𝘦 𝘵𝘩𝘪𝘴 𝘉𝘰𝘵!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕ 𝙰𝚍𝚍 𝙼𝚎 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙶𝚛𝚘𝚞𝚙𝚜 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 𝚂𝚎𝚊𝚛𝚌𝚑', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 𝚄𝚙𝚍𝚊𝚝𝚎𝚜', url='https://t.me/GreyMatter_Bots')
+            InlineKeyboardButton('⚡ ꜱᴜʙꜱᴄʀɪʙᴇ ⚡', url='https://www.youtube.com/@CinematoBugTV'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ 🤖', url='https://t.me/PlusTechz')
             ],[
-            InlineKeyboardButton('ℹ️ 𝙷𝚎𝚕𝚙', callback_data='help'),
-            InlineKeyboardButton('😊 𝙰𝚋𝚘𝚞𝚝', callback_data='about')
+            InlineKeyboardButton('‼️ ʜᴇʟᴘ ‼️', callback_data='help'),
+            InlineKeyboardButton('♻️ ᴀʙᴏᴜᴛ ♻️', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
