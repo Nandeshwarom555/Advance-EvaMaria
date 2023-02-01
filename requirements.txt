@@ -1,7 +1,6 @@
 Flask
 gunicorn
 aiohttp
-git+https://github.com/Joelkb/cinemagoer
 pyrogram
 imdbpy
 tgcrypto
