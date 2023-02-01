@@ -3,6 +3,7 @@ gunicorn==20.1.0
 aiohttp==3.8.1
 git+https://github.com/Joelkb/cinemagoer
 pyrogram>=2.0.30
+imdbpy==2022.7.9
 tgcrypto
 pymongo[srv]==3.12.3
 motor==2.5.1
